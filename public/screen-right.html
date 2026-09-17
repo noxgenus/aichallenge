@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Challenge Right Screen</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="single-screen-body" data-display-side="right">
+    <main class="single-video-screen" aria-label="Right contestant desktop">
+      <section class="video-stage">
+        <header class="stage-header">
+          <span class="contestant-label">Contestant B</span>
+          <span class="status-pill" id="right-status">Waiting</span>
+        </header>
+        <video id="right-video" autoplay playsinline muted></video>
+      </section>
+    </main>
+    <button type="button" class="audio-toggle" id="audio-toggle" aria-pressed="false">Enable Audio</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/shared.js"></script>
+    <script src="/display.js"></script>
+  </body>
+</html>

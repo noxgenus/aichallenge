@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# TLS material (server-specific; never commit private keys)
+certs/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Environment and runtime files
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+
+# Editor and OS metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

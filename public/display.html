@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Challenge Display</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="display-body">
+    <main class="display-grid" aria-label="AI challenge display">
+      <section class="video-stage" aria-label="Left contestant desktop">
+        <header class="stage-header">
+          <span class="contestant-label">Contestant A</span>
+          <span class="status-pill" id="left-status">Waiting</span>
+        </header>
+        <video id="left-video" autoplay playsinline muted></video>
+      </section>
+
+      <section class="challenge-stage" aria-label="Challenge prompt and timer">
+        <div class="challenge-topline">
+          <span id="round-status">Ready</span>
+          <span id="connection-status">Connected</span>
+        </div>
+        <div class="timer" id="timer">05:00</div>
+        <article class="prompt" id="prompt">
+          Build a useful AI assistant for a live event host. You have five minutes. Show the clearest workflow you can.
+        </article>
+      </section>
+
+      <section class="video-stage" aria-label="Right contestant desktop">
+        <header class="stage-header">
+          <span class="contestant-label">Contestant B</span>
+          <span class="status-pill" id="right-status">Waiting</span>
+        </header>
+        <video id="right-video" autoplay playsinline muted></video>
+      </section>
+    </main>
+    <button type="button" class="audio-toggle" id="audio-toggle" aria-pressed="false">Enable Audio</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/shared.js"></script>
+    <script src="/display.js"></script>
+  </body>
+</html>

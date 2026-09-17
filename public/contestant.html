@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Challenge Contestant</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="contestant-body">
+    <main class="contestant-shell">
+      <header class="contestant-header">
+        <p class="eyebrow">AI Challenge Game</p>
+        <h1 id="contestant-title">Contestant</h1>
+      </header>
+
+      <section class="share-panel">
+        <video id="preview-video" autoplay playsinline muted></video>
+        <div class="share-controls">
+          <div>
+            <p class="share-status" id="share-status">Not sharing</p>
+            <p class="share-note" id="share-note">Choose your desktop or application window and enable audio when the browser asks.</p>
+          </div>
+          <label class="check-row" for="mic-checkbox">
+            <input id="mic-checkbox" type="checkbox">
+            <span>Include microphone</span>
+          </label>
+          <div class="button-row compact">
+            <button type="button" id="share-button" class="success">Share Screen</button>
+            <button type="button" id="stop-button" class="danger">Stop</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/shared.js"></script>
+    <script src="/contestant.js"></script>
+  </body>
+</html>
